@@ -1,0 +1,87 @@
+{
+	"name": "Rabbit",
+	"plugin-id": "Sprite",
+	"sid": 401718916592285,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "IsLocked",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 993302382196540
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 692464839644088
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 926494921434003
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 416,
+						"height": 421,
+						"originX": 0.5,
+						"originY": 0.49406175771971494,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 994399,
+						"collisionPoly": {
+							"points": [
+								0.43990384615384615,
+								0.004750593824228029,
+								0.9110576923076923,
+								0.12826603325415678,
+								0.9855769230769231,
+								0.7695961995249406,
+								0.9663461538461539,
+								0.8408551068883611,
+								0.9182692307692307,
+								0.8883610451306413,
+								0.7956730769230769,
+								0.9477434679334917,
+								0.6466346153846154,
+								0.9738717339667459,
+								0.46634615384615385,
+								0.9738717339667459,
+								0.20432692307692307,
+								0.9026128266033254,
+								0.014423076923076924,
+								0.6935866983372921,
+								0.07932692307692307,
+								0.5368171021377672,
+								0.3389423076923077,
+								0.06413301662707839
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 651140391543165,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

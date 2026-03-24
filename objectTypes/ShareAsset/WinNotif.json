@@ -1,0 +1,64 @@
+{
+	"name": "WinNotif",
+	"plugin-id": "Sprite",
+	"sid": 334439732586438,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 666060544697857
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1397,
+						"height": 1080,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5303182,
+						"collisionPoly": {
+							"points": [
+								0.5204008589835362,
+								0.037037037037037035,
+								0.7788117394416607,
+								0.25555555555555554,
+								0.8475304223335719,
+								0.39444444444444443,
+								0.8167501789549033,
+								0.7324074074074074,
+								0.164638511095204,
+								0.7018518518518518,
+								0.16177523264137436,
+								0.38055555555555554,
+								0.23550465282748748,
+								0.24259259259259258
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 947834031364605,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

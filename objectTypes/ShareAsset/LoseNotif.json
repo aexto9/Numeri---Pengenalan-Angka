@@ -1,0 +1,62 @@
+{
+	"name": "LoseNotif",
+	"plugin-id": "Sprite",
+	"sid": 408997790020607,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 400982041423798
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1256,
+						"height": 798,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6002722,
+						"collisionPoly": {
+							"points": [
+								0.5246815286624203,
+								0.047619047619047616,
+								0.8232484076433121,
+								0.31704260651629074,
+								0.8495222929936306,
+								0.9874686716791979,
+								0.1265923566878981,
+								0.9598997493734336,
+								0.1106687898089172,
+								0.4724310776942356,
+								0.18710191082802546,
+								0.30701754385964913
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 758429365395107,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

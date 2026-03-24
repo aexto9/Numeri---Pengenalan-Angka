@@ -1,0 +1,54 @@
+{
+	"name": "ES_Level2_PA_Open",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-click",
+					"objectClass": "Mouse",
+					"sid": 235123052459853
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "GoToLayoutFunction",
+					"sid": 683698345842818,
+					"parameters": [
+						"\"Lay_Lvl2_PA2\""
+					]
+				}
+			],
+			"sid": 998914361976706
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-time",
+					"objectClass": "System",
+					"sid": 821100852968501,
+					"parameters": {
+						"comparison": 0,
+						"time-seconds": "3.0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "GoToLayoutFunction",
+					"sid": 466261094488440,
+					"parameters": [
+						"\"Lay_Lvl2_PA2\""
+					]
+				}
+			],
+			"sid": 633774172063372
+		}
+	],
+	"sid": 709309562545077
+}

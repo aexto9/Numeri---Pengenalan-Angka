@@ -1,0 +1,696 @@
+{
+	"name": "ES_Level2_T2",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Step 1 - System Initialization",
+			"description": "Setup awal game: hide semua objek, set initial values, show dialog intro",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 998931154275205
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 668390823423028,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/diruang kelas"
+								},
+								"loop": "not-looping",
+								"volume": "3",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"callFunction": "startGame",
+							"sid": 924527361002505
+						},
+						{
+							"callFunction": "Timer",
+							"sid": 490173795030065,
+							"parameters": [
+								"30"
+							]
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 125666912160280,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "bg_level_2_t2",
+							"sid": 293001154215635,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "dialog_level_2_t2_1",
+							"sid": 628765179329114,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "dialog_level_2_t2_2",
+							"sid": 338951324094105,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PETUNJUKPERSEGI_level_2_t2",
+							"sid": 196972556359542,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "soal_persegi_level_2_t2",
+							"sid": 582956189640596,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "bener_level_2_t2",
+							"sid": 289777208616073,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "salah2_level_2_t2",
+							"sid": 808127416799929,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "salah3_level_2_t2",
+							"sid": 173328643864239,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "jikaBenar_level_2_t2",
+							"sid": 913111287352673,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "jikaSalahpilih_level_2_t2",
+							"sid": 131811428477588,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "finish_level_2_t2",
+							"sid": 218030239480999,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "motivasi_level_2_t2",
+							"sid": 710538550202492,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 548942787629658
+				},
+				{
+					"eventType": "comment",
+					"text": "Catatan: Instance variables isCorrect sudah di-set di layout:\n- bener_level_2_t2: isCorrect = true\n- salah2_level_2_t2: isCorrect = false\n- salah3_level_2_t2: isCorrect = false"
+				}
+			],
+			"sid": 169964924438810
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Step 2 - Dialog Flow",
+			"description": "Alur dialog: intro → instruksi → mulai quiz",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 455951702556150,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "dialog_level_2_t2_1"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "dialog_level_2_t2_1",
+							"sid": 547582236874465
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "dialog_level_2_t2_1",
+							"sid": 432881458746005,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 847978863597254,
+							"parameters": {
+								"seconds": "0.1",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "dialog_level_2_t2_2",
+							"sid": 983684434173641,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 602042402388058
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 620318919073996,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "dialog_level_2_t2_2"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "dialog_level_2_t2_2",
+							"sid": 642037376077269
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "dialog_level_2_t2_2",
+							"sid": 377779162242127,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "soal_persegi_level_2_t2",
+							"sid": 962851674411734,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "bener_level_2_t2",
+							"sid": 214548762539366,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "salah2_level_2_t2",
+							"sid": 611045155607369,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "salah3_level_2_t2",
+							"sid": 588989349443171,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 832967788564835
+				},
+				{
+					"eventType": "comment",
+					"text": "Flow: Dialog 1 (intro) → klik → Dialog 2 (instruksi) → klik → Quiz muncul (soal + 3 pilihan)"
+				}
+			],
+			"sid": 706200115748124
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Step 3 - Quiz Display",
+			"description": "Tampilkan soal dan pilihan jawaban",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 214596806170695
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Step 4 - Answer Validation",
+			"description": "Validasi jawaban benar/salah dengan instance variable isCorrect",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 543299256481597,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "bener_level_2_t2"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "bener_level_2_t2",
+							"sid": 359701318155797,
+							"parameters": {
+								"instance-variable": "isCorrect",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 521018785959986,
+							"parameters": {
+								"variable": "IsGameOver"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 597075348303003,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/jawaban benar"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "bener_level_2_t2",
+							"sid": 163961684938399,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "salah2_level_2_t2",
+							"sid": 494726589043144,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "salah3_level_2_t2",
+							"sid": 306223822611571,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "soal_persegi_level_2_t2",
+							"sid": 442179625540140,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "jikaBenar_level_2_t2",
+							"sid": 679840406872961,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 882858935336204,
+							"parameters": {
+								"seconds": "1.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "jikaBenar_level_2_t2",
+							"sid": 278395489151132,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "finish_level_2_t2",
+							"sid": 739266835437186,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 179596860631076,
+							"parameters": {
+								"seconds": "1.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "finish_level_2_t2",
+							"sid": 994108015634745,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 434119404110180,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"callFunction": "winGame",
+							"sid": 350998569665305,
+							"parameters": [
+								"\"Lay_Level2_T3\""
+							]
+						}
+					],
+					"sid": 716300440307806
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 380696605483216,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "salah2_level_2_t2"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "salah2_level_2_t2",
+							"sid": 236501876086098,
+							"parameters": {
+								"instance-variable": "isCorrect",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "salah2_level_2_t2",
+							"sid": 238506608193951
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 322381592674506,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/puzzle salah"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "salah2_level_2_t2",
+							"sid": 131406168112418,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "jikaSalahpilih_level_2_t2",
+							"sid": 956198098780064,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 890579521831382,
+							"parameters": {
+								"seconds": "1",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "jikaSalahpilih_level_2_t2",
+							"sid": 934821538907811,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 576901166174454
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 262482352442860,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "salah3_level_2_t2"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "salah3_level_2_t2",
+							"sid": 662075488227479,
+							"parameters": {
+								"instance-variable": "isCorrect",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "salah3_level_2_t2",
+							"sid": 371492153965722
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 257549367198805,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/puzzle salah"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "salah3_level_2_t2",
+							"sid": 247081861480934,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "jikaSalahpilih_level_2_t2",
+							"sid": 742921430414584,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 803707063424941,
+							"parameters": {
+								"seconds": "1",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "jikaSalahpilih_level_2_t2",
+							"sid": 837966094327080,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 228657947344109
+				}
+			],
+			"sid": 194194486509319
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Step 6 - Timer 2 Menit",
+			"description": "Countdown timer 2 menit untuk quiz",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 582585170252555,
+							"parameters": {
+								"variable": "timer",
+								"comparison": 2,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "LoseGame",
+							"sid": 348644358060310
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "soal_persegi_level_2_t2",
+							"sid": 119662963833378,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "bener_level_2_t2",
+							"sid": 336252093664277,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "salah2_level_2_t2",
+							"sid": 778666334057221,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "salah3_level_2_t2",
+							"sid": 479633347522887,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "jikaWaktuHabis_level_2_t2",
+							"sid": 383535104535323,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 360737276267330
+				},
+				{
+					"eventType": "comment",
+					"text": "Timer Logic:\n- Timer mulai saat dialog_2 diklik (quiz mulai)\n- Countdown setiap detik, format MM:SS\n- Waktu habis → hide quiz, show jikaWaktuHabis 2 detik → restart layout"
+				}
+			],
+			"sid": 775649603301859
+		}
+	],
+	"sid": 539032594225758
+}
