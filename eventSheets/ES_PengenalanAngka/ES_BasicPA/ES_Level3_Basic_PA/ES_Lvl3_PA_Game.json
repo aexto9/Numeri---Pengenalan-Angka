@@ -1,0 +1,185 @@
+{
+	"name": "ES_Lvl3_PA_Game",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 975881107555593,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Angka_lvl3_PA"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Angka_lvl3_PA",
+					"sid": 284573946489091,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX + 20",
+						"end-y": "Self.SizeY + 20",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 700646035380267,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Angka_lvl3_PA",
+					"sid": 356276967711006,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX",
+						"end-y": "Self.SizeY",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 358703606303122,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Angka_lvl3_PA",
+							"sid": 758558906765516,
+							"parameters": {
+								"instance-variable": "Answer",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 171651340122698,
+							"parameters": {
+								"variable": "score",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 341925391365433,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 942661756710346,
+									"parameters": {
+										"variable": "score",
+										"comparison": 1,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 391801063361875,
+									"parameters": {
+										"audio-file": {
+											"path": "Level2/jawaban benar"
+										},
+										"loop": "not-looping",
+										"volume": "1",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 913870046096138,
+									"parameters": {
+										"seconds": "2.0",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "go-to-nextprevious-layout",
+									"objectClass": "System",
+									"sid": 112126114558586,
+									"parameters": {
+										"which": "next"
+									}
+								}
+							],
+							"sid": 683040887768592
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Angka_lvl3_PA",
+							"sid": 793393052449863,
+							"parameters": {
+								"instance-variable": "Answer",
+								"comparison": 1,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 703132874285749,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/jawaban salah-variasi-1"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 825206654030119
+				}
+			]
+		}
+	],
+	"sid": 375755130393297
+}

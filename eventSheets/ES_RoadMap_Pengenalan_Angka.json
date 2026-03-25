@@ -3,7 +3,7 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "Level",
+			"name": "Level_Pengenalan_Angka",
 			"type": "number",
 			"initialValue": "1",
 			"comment": "",
@@ -200,9 +200,9 @@
 					"objectClass": "Btn_Lvl",
 					"sid": 203429610685530,
 					"parameters": {
-						"instance-variable": "id_Level",
+						"instance-variable": "id_Level_Pengenalan_Angka",
 						"comparison": 3,
-						"value": "Level"
+						"value": "Level_Pengenalan_Angka"
 					}
 				}
 			],
@@ -212,7 +212,7 @@
 					"objectClass": "Btn_Lvl",
 					"sid": 516309623546205,
 					"parameters": {
-						"frame-number": "Btn_Lvl.id_Level"
+						"frame-number": "Btn_Lvl.id_Level_Pengenalan_Angka"
 					}
 				}
 			],
@@ -288,12 +288,11 @@
 					}
 				},
 				{
-					"id": "go-to-layout-by-name",
-					"objectClass": "System",
-					"sid": 728241362485100,
-					"parameters": {
-						"layout": "Btn_Lvl.Target"
-					}
+					"callFunction": "GoToLayoutFunction",
+					"sid": 457250373110230,
+					"parameters": [
+						"Btn_Lvl.Target"
+					]
 				}
 			],
 			"sid": 277835349469078
@@ -357,6 +356,13 @@
 						"ping-pong": "no",
 						"repeat-count": "1"
 					}
+				},
+				{
+					"callFunction": "GoToLayoutFunction",
+					"sid": 727821281522510,
+					"parameters": [
+						"\"Lay_Reward\""
+					]
 				}
 			],
 			"sid": 350777255573145

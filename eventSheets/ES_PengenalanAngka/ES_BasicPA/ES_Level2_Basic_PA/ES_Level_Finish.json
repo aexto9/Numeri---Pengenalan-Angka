@@ -51,7 +51,7 @@
 							"objectClass": "System",
 							"sid": 260420603878396,
 							"parameters": {
-								"variable": "Level",
+								"variable": "Level_Pengenalan_Angka",
 								"comparison": 3,
 								"value": "1"
 							}
@@ -63,7 +63,7 @@
 							"objectClass": "System",
 							"sid": 441853762580865,
 							"parameters": {
-								"variable": "Level",
+								"variable": "Level_Pengenalan_Angka",
 								"value": "1"
 							}
 						}

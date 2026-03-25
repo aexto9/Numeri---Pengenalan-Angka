@@ -1,0 +1,188 @@
+{
+	"name": "ES_Lvl3_PA",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Lvl3_PA_Game"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 234386493839697
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Angka_lvl3_PA",
+					"sid": 224583006370040,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Angka_lvl3_PA",
+					"sid": 297765264078928,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				}
+			],
+			"sid": 725195370229612,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 337883493357336,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Lay_Lvl3_PA-1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "startGame",
+							"sid": 493119569688861
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 985291287248722,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"callFunction": "Timer",
+							"sid": 380949477830712,
+							"parameters": [
+								"120"
+							]
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 788685903961477,
+							"parameters": {
+								"variable": "score",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 637563574341307
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 626877631699034,
+					"parameters": {
+						"variable": "timer",
+						"comparison": 2,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 887877638350793,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "LoseGame",
+					"sid": 498193717423598
+				}
+			],
+			"sid": 572485159470836
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 871458742584209,
+					"parameters": {
+						"variable": "score",
+						"comparison": 0,
+						"value": "3"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 649104295000484,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "winGame",
+					"sid": 272323427901714,
+					"parameters": [
+						"\"Lay_RoadMap_Pengenalan_Angka\""
+					]
+				}
+			],
+			"sid": 360950720041332,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 521914067649026,
+							"parameters": {
+								"variable": "Level_Pengenalan_Angka",
+								"comparison": 3,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 212570916751718,
+							"parameters": {
+								"variable": "Level_Pengenalan_Angka",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 871517702454611
+				}
+			]
+		}
+	],
+	"sid": 844308227122282
+}

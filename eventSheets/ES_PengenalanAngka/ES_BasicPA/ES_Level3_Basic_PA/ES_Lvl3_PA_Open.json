@@ -1,0 +1,126 @@
+{
+	"name": "ES_Lvl3_PA_Open",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 983372157405734
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 688762381214211,
+					"parameters": {
+						"audio-file": {
+							"path": "Level2/dikamar tidur"
+						},
+						"loop": "not-looping",
+						"volume": "1.5",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Btn_Lvl3_Play",
+					"sid": 224888933538224,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Btn_Lvl3_Play",
+					"sid": 535580755690503,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				}
+			],
+			"sid": 290453603132559
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 196554488766433,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Btn_Lvl3_Play"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Btn_Lvl3_Play",
+					"sid": 469503699686495,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX + 20",
+						"end-y": "Self.SizeY + 20",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 590796323985792,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Btn_Lvl3_Play",
+					"sid": 555085030950964,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX",
+						"end-y": "Self.SizeY",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 907274470252290,
+					"parameters": {
+						"layout": "Lay_Lvl3_PA-1"
+					}
+				}
+			],
+			"sid": 332746939944468
+		}
+	],
+	"sid": 230883279256720
+}

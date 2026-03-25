@@ -13,7 +13,7 @@
 			"sid": 451750980427688
 		},
 		{
-			"name": "id_Level",
+			"name": "id_Level_Pengenalan_Angka",
 			"type": "number",
 			"desc": "",
 			"show": true,

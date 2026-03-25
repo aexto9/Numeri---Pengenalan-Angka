@@ -165,31 +165,46 @@
 				"items": [],
 				"subfolders": [
 					{
-						"items": [
-							"Group",
-							"Drop",
-							"Drag",
-							"Banner",
-							"Tema_KamarTidurLV1TKB",
-							"Sprite",
-							"Drag_2",
-							"Drop_2"
+						"items": [],
+						"subfolders": [
+							{
+								"items": [
+									"Group",
+									"Drop",
+									"Drag",
+									"Banner",
+									"Tema_KamarTidurLV1TKB",
+									"Sprite",
+									"Drag_2",
+									"Drop_2"
+								],
+								"subfolders": [],
+								"name": "Level 1"
+							},
+							{
+								"items": [
+									"Bg_Level2_T2",
+									"Drag_Lvl2",
+									"Bg_Level2_Open",
+									"Drop_Lvl2"
+								],
+								"subfolders": [],
+								"name": "Level 2"
+							},
+							{
+								"items": [
+									"Bg_lvl3_Basic_PA",
+									"Btn_Lvl3_Play",
+									"Angka_lvl3_PA"
+								],
+								"subfolders": [],
+								"name": "Level 3"
+							}
 						],
-						"subfolders": [],
-						"name": "Level_1_T1"
-					},
-					{
-						"items": [
-							"Bg_Level2_T2",
-							"Drag_Lvl2",
-							"Bg_Level2_Open",
-							"Drop_Lvl2"
-						],
-						"subfolders": [],
-						"name": "T2"
+						"name": "Basic"
 					}
 				],
-				"name": "Level_1"
+				"name": "Pengenalan Angka"
 			},
 			{
 				"items": [],
@@ -629,7 +644,8 @@
 					"home",
 					"LoseNotif",
 					"TImer",
-					"next"
+					"next",
+					"close"
 				],
 				"subfolders": [],
 				"name": "ShareAsset"
@@ -649,6 +665,17 @@
 				],
 				"subfolders": [],
 				"name": "Roadmap_Pengenalan_Angka"
+			},
+			{
+				"items": [
+					"Header_Reward",
+					"Bg_Used",
+					"Box",
+					"BG_Full_Reward",
+					"Reward_PA"
+				],
+				"subfolders": [],
+				"name": "Reward"
 			}
 		]
 	},
@@ -663,7 +690,8 @@
 		"items": [
 			"Lay_MainMenu",
 			"Lay_RoadMap",
-			"Lay_RoadMap_Pengenalan_Angka"
+			"Lay_RoadMap_Pengenalan_Angka",
+			"Lay_Reward"
 		],
 		"subfolders": [
 			{
@@ -742,6 +770,16 @@
 								],
 								"subfolders": [],
 								"name": "Lay_Level 2_Basic_PA"
+							},
+							{
+								"items": [
+									"Lay_Lvl3_PA",
+									"Lay_Lvl3_PA-1",
+									"Lay_Lvl3_PA-2",
+									"Lay_Lvl3_PA-3"
+								],
+								"subfolders": [],
+								"name": "Lay_Level 3_Basic_PA"
 							}
 						],
 						"name": "Lay_Basic_PA"
@@ -756,7 +794,8 @@
 			"ES_RoadMap",
 			"ES_MainMenu",
 			"ES_Global",
-			"ES_RoadMap_Pengenalan_Angka"
+			"ES_RoadMap_Pengenalan_Angka",
+			"ES_Reward"
 		],
 		"subfolders": [
 			{
@@ -833,6 +872,15 @@
 								],
 								"subfolders": [],
 								"name": "ES_Level2_Basic_PA"
+							},
+							{
+								"items": [
+									"ES_Lvl3_PA_Open",
+									"ES_Lvl3_PA_Game",
+									"ES_Lvl3_PA"
+								],
+								"subfolders": [],
+								"name": "ES_Level3_Basic_PA"
 							}
 						],
 						"name": "ES_BasicPA"

@@ -1,0 +1,151 @@
+{
+	"name": "ES_Reward",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 679285251720780
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 538813866419609,
+					"parameters": {
+						"audio-file": {
+							"path": "MainTheme"
+						},
+						"loop": "looping",
+						"volume": "1",
+						"stereo-pan": "0",
+						"tag-optional": "\"MainTheme\""
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "close",
+					"sid": 882859859042246,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "close",
+					"sid": 107912400489138,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				}
+			],
+			"sid": 325895407994144
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Reward_PA",
+					"sid": 234677124519153,
+					"parameters": {
+						"instance-variable": "Reward_Pengenalan_Angka",
+						"comparison": 2,
+						"value": "Level_Pengenalan_Angka"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Reward_PA",
+					"sid": 364261169056428,
+					"parameters": {
+						"frame-number": "Reward_PA.Reward_Pengenalan_Angka"
+					}
+				}
+			],
+			"sid": 555478833703526
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 490576284345344,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "close"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "close",
+					"sid": 342714990111943,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX + 20",
+						"end-y": "Self.SizeY + 20",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 577578806357030,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "close",
+					"sid": 308046757632139,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX",
+						"end-y": "Self.SizeY",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"callFunction": "GoToLayoutFunction",
+					"sid": 909685082025209,
+					"parameters": [
+						"\"Lay_RoadMap_Pengenalan_Angka\""
+					]
+				}
+			],
+			"sid": 779693798559621
+		}
+	],
+	"sid": 589446781339147
+}
