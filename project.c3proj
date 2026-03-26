@@ -176,7 +176,8 @@
 									"Tema_KamarTidurLV1TKB",
 									"Sprite",
 									"Drag_2",
-									"Drop_2"
+									"Drop_2",
+									"Bg_Lvl1_Open"
 								],
 								"subfolders": [],
 								"name": "Level 1"
@@ -778,6 +779,7 @@
 							{
 								"items": [
 									"Lay_Lvl1_PA",
+									"Lay_Lvl1_PA1",
 									"Lay_Lvl1_PA2",
 									"Lay_Lvl1_PA3",
 									"Lay_Lvl1_PA4",
@@ -856,8 +858,7 @@
 			"ES_MainMenu",
 			"ES_Global",
 			"ES_RoadMap_Pengenalan_Angka",
-			"ES_Reward",
-			"Event sheet 1"
+			"ES_Reward"
 		],
 		"subfolders": [
 			{
@@ -915,12 +916,9 @@
 						"subfolders": [
 							{
 								"items": [
-									"ES_Lvl1_PA",
+									"ES_Lvl1_PA1",
 									"ES_Lvl1_PA2",
-									"ES_Lvl1_PA3",
-									"ES_Lvl1_PA4",
-									"ES_Lvl1_PA5",
-									"ES_Lvl1_PA6"
+									"ES_Lvl1_PA_Open"
 								],
 								"subfolders": [],
 								"name": "ES_Level1_Basic_PA"
@@ -1204,6 +1202,60 @@
 					],
 					"subfolders": [],
 					"name": "Level3"
+				},
+				{
+					"items": [
+						{
+							"name": "Correct_PA.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 351845163181401,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Click_PA.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 957724997657649,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Wrong_PA.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 124040105223672,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Pop_PA.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 913374188331143,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Yay_PA.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 521033442978325,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Yay2_PA.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 721484564056853,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "Pengenalan_Angka"
 				}
 			]
 		},
