@@ -230,15 +230,6 @@
 						"click-type": "clicked",
 						"object-clicked": "Btn_Lvl"
 					}
-				},
-				{
-					"id": "compare-animation-frame",
-					"objectClass": "Btn_Lvl",
-					"sid": 329983406472468,
-					"parameters": {
-						"comparison": 1,
-						"number": "0"
-					}
 				}
 			],
 			"actions": [
@@ -286,16 +277,35 @@
 						"ping-pong": "no",
 						"repeat-count": "1"
 					}
-				},
-				{
-					"callFunction": "GoToLayoutFunction",
-					"sid": 457250373110230,
-					"parameters": [
-						"Btn_Lvl.Target"
-					]
 				}
 			],
-			"sid": 277835349469078
+			"sid": 277835349469078,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Btn_Lvl",
+							"sid": 961605280383901,
+							"parameters": {
+								"comparison": 1,
+								"number": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "GoToLayoutFunction",
+							"sid": 784458207124961,
+							"parameters": [
+								"Btn_Lvl.Target"
+							]
+						}
+					],
+					"sid": 590992003340757
+				}
+			]
 		},
 		{
 			"eventType": "block",

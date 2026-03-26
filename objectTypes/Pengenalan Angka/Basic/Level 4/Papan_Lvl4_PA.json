@@ -1,0 +1,78 @@
+{
+	"name": "Papan_Lvl4_PA",
+	"plugin-id": "Sprite",
+	"sid": 249530921818461,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 374,
+						"height": 901,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6554304,
+						"collisionPoly": {
+							"points": [
+								0.045454545454545456,
+								0,
+								1,
+								0.018867924528301886,
+								0.9545454545454546,
+								1,
+								0,
+								0.9811320754716981
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 374,
+						"height": 236,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7492313,
+						"collisionPoly": {
+							"points": [
+								0.045454545454545456,
+								0,
+								1,
+								0.07203389830508475,
+								0.9545454545454546,
+								1,
+								0,
+								0.9279661016949152
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 661271627984149,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

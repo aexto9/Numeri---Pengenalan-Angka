@@ -1,0 +1,52 @@
+{
+	"name": "Judul_Lvl4_PA",
+	"plugin-id": "Sprite",
+	"sid": 297631438665512,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 911,
+						"height": 565,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8949128,
+						"collisionPoly": {
+							"points": [
+								0.04610318331503842,
+								0,
+								0.9989023051591658,
+								0.07256637168141593,
+								0.9517014270032931,
+								0.9769911504424779,
+								0,
+								0.904424778761062
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 698724340714802,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

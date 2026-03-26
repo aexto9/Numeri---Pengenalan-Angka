@@ -111,6 +111,15 @@
 					}
 				},
 				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 984943947061299,
+					"parameters": {
+						"seconds": "0.3",
+						"use-timescale": true
+					}
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 907274470252290,

@@ -1,0 +1,134 @@
+{
+	"name": "ES_Lvl4_PA",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Lvl4_PA_Game"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 344870192310298
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Drag_Lvl4_PA",
+					"sid": 491894532132576,
+					"parameters": {
+						"instance-variable": "PostX",
+						"value": "Self.X"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Drag_Lvl4_PA",
+					"sid": 515475530450507,
+					"parameters": {
+						"instance-variable": "PostY",
+						"value": "Self.Y"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 998293775618722,
+					"parameters": {
+						"variable": "score",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 325579740588544,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 356002684715904,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Lay_Lvl4_PA1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "startGame",
+							"sid": 337964340768592
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 683425034950057,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"callFunction": "Timer",
+							"sid": 111857869694259,
+							"parameters": [
+								"120"
+							]
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 439183882246704,
+							"parameters": {
+								"variable": "score",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 510375560281155
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 378187731265753,
+					"parameters": {
+						"variable": "timer",
+						"comparison": 2,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 284772981285890,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "LoseGame",
+					"sid": 304777419110486
+				}
+			],
+			"sid": 820287851422845
+		}
+	],
+	"sid": 324833571822326
+}

@@ -1,0 +1,203 @@
+{
+	"name": "Drag_Buku_Lvl4_PA",
+	"plugin-id": "Sprite",
+	"sid": 133395271194662,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "PostY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 455975069513160
+		},
+		{
+			"name": "PostX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 243823462782586
+		},
+		{
+			"name": "Target_Lay_Buku",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 927904504963668
+		},
+		{
+			"name": "SizeX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 843848819142663
+		},
+		{
+			"name": "SizeY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 467951881983272
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 870260392030332
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 603902577838187
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 151,
+						"height": 201,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2033977,
+						"collisionPoly": {
+							"points": [
+								0.06622516556291391,
+								0,
+								0.9933774834437086,
+								0.04477611940298507,
+								0.9337748344370861,
+								0.9950248756218906,
+								0,
+								0.9502487562189055
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 151,
+						"height": 201,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2112186,
+						"collisionPoly": {
+							"points": [
+								0.06622516556291391,
+								0,
+								0.9933774834437086,
+								0.04477611940298507,
+								0.9337748344370861,
+								0.9950248756218906,
+								0,
+								0.9502487562189055
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 151,
+						"height": 201,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5414220,
+						"collisionPoly": {
+							"points": [
+								0.06622516556291391,
+								0,
+								0.9933774834437086,
+								0.04477611940298507,
+								0.9337748344370861,
+								0.9950248756218906,
+								0,
+								0.9502487562189055
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 151,
+						"height": 201,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3214555,
+						"collisionPoly": {
+							"points": [
+								0.06622516556291391,
+								0,
+								0.9933774834437086,
+								0.04477611940298507,
+								0.9337748344370861,
+								0.9950248756218906,
+								0,
+								0.9502487562189055
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 151,
+						"height": 201,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 43416,
+						"collisionPoly": {
+							"points": [
+								0.06622516556291391,
+								0,
+								0.9933774834437086,
+								0.04477611940298507,
+								0.9337748344370861,
+								0.9950248756218906,
+								0,
+								0.9502487562189055
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 758268896724488,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

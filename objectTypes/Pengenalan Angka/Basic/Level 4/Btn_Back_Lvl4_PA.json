@@ -1,0 +1,75 @@
+{
+	"name": "Btn_Back_Lvl4_PA",
+	"plugin-id": "Sprite",
+	"sid": 355600741104620,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "SizeX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 915498906854418
+		},
+		{
+			"name": "SizeY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 918306581938480
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 670988366241771
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 514,
+						"height": 98,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5975514,
+						"collisionPoly": {
+							"points": [
+								0.054474708171206226,
+								0,
+								0.9571984435797666,
+								0.02040816326530612,
+								0.943579766536965,
+								0.8979591836734694,
+								0.042801556420233464,
+								0.8775510204081632,
+								0.02529182879377432,
+								0.826530612244898
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 657728032820585,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

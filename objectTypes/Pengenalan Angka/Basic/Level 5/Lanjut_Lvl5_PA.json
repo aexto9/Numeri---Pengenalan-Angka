@@ -1,0 +1,85 @@
+{
+	"name": "Lanjut_Lvl5_PA",
+	"plugin-id": "Sprite",
+	"sid": 932622343323251,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "SizeX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 617452829150472
+		},
+		{
+			"name": "SizeY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 208124455581264
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 136017924764356
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 298,
+						"height": 98,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3327466,
+						"collisionPoly": {
+							"points": [
+								0.09395973154362416,
+								0,
+								0.9395973154362416,
+								0.04081632653061224,
+								0.9664429530201343,
+								0.10204081632653061,
+								0.9798657718120806,
+								0.15306122448979592,
+								0.9731543624161074,
+								0.7755102040816326,
+								0.9026845637583892,
+								0.8979591836734694,
+								0.0436241610738255,
+								0.826530612244898,
+								0.020134228187919462,
+								0.7551020408163265,
+								0,
+								0.6224489795918368,
+								0.02348993288590604,
+								0.1326530612244898
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 457412000830675,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

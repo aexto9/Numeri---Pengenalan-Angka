@@ -627,20 +627,20 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 3,
-					"sid": 338143776532097,
+					"uid": 464,
+					"sid": 192427686405844,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 338143776532097,
+						"sid": 192427686405844,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 136,
-						"y": 70,
+						"x": 134,
+						"y": 86,
 						"width": 191.46002500906187,
 						"height": 93.88905072559764,
 						"originX": 0.5,
@@ -680,20 +680,20 @@
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 258,
-					"sid": 514214378737760,
+					"uid": 465,
+					"sid": 103650782731854,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 514214378737760,
+						"sid": 103650782731854,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 130,
-						"y": 65,
+						"x": 128,
+						"y": 82,
 						"width": 75,
 						"height": 30,
 						"originX": 0,

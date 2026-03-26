@@ -1,0 +1,512 @@
+{
+	"name": "ES_Lvl4_PA_Game2",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 892999446976010
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 941620916545386,
+					"parameters": {
+						"variable": "score",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Drag_Buku_Lvl4_PA",
+					"sid": 911239938429044,
+					"parameters": {
+						"instance-variable": "PostX",
+						"value": "Self.X"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Drag_Buku_Lvl4_PA",
+					"sid": 505962182072612,
+					"parameters": {
+						"instance-variable": "PostY",
+						"value": "Self.Y"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Drag_Buku_Lvl4_PA",
+					"sid": 871683422078921,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Drag_Buku_Lvl4_PA",
+					"sid": 290114593569879,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Btn_Back_Lvl4_PA",
+					"sid": 436812379906545,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Btn_Back_Lvl4_PA",
+					"sid": 558086376599104,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				}
+			],
+			"sid": 988046759370167
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-drag-start",
+					"objectClass": "Drag_Buku_Lvl4_PA",
+					"sid": 537743086147829,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-top",
+					"objectClass": "Drag_Buku_Lvl4_PA",
+					"sid": 634295404493085
+				}
+			],
+			"sid": 491966708104469
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-drop",
+					"objectClass": "Drag_Buku_Lvl4_PA",
+					"sid": 547412782959841,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"actions": [],
+			"sid": 810690237223827,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Drag_Buku_Lvl4_PA",
+							"sid": 319079607924924,
+							"parameters": {
+								"object": "Drop_Buku_Lvl4_PA"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 353583556670418,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Drag_Buku_Lvl4_PA",
+									"sid": 652528518277641,
+									"parameters": {
+										"comparison": 0,
+										"number": "Drop_Buku_Lvl4_PA.AnimationFrame"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Drag_Buku_Lvl4_PA",
+									"sid": 285885542386522,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "position",
+										"end-x": "Drop_Buku_Lvl4_PA.X",
+										"end-y": "Drop_Buku_Lvl4_PA.Y",
+										"time": "1",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Drag_Buku_Lvl4_PA",
+									"sid": 295358659799397,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "size",
+										"end-x": "Drop_Buku_Lvl4_PA.Width",
+										"end-y": "Drop_Buku_Lvl4_PA.Height",
+										"time": "0.3",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Drag_Buku_Lvl4_PA",
+									"sid": 630769374043640,
+									"behaviorType": "DragDrop",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 903047885227274,
+									"parameters": {
+										"variable": "score",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 674049256745706,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 282742900906050,
+											"parameters": {
+												"variable": "score",
+												"comparison": 0,
+												"value": "5"
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 808978648095630,
+											"parameters": {
+												"variable": "IsGameOver"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Dialog_Lvl4_PA",
+											"sid": 355286601419027,
+											"parameters": {
+												"frame-number": "2"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 822500980354408,
+											"parameters": {
+												"seconds": "2.0",
+												"use-timescale": true
+											}
+										},
+										{
+											"callFunction": "winGame",
+											"sid": 254010145916824,
+											"parameters": [
+												"\"Lay_RoadMap_Pengenalan_Angka\""
+											]
+										}
+									],
+									"sid": 893717723615963,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 304350095735952,
+													"parameters": {
+														"variable": "Level_Pengenalan_Angka",
+														"comparison": 3,
+														"value": "4"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "add-to-eventvar",
+													"objectClass": "System",
+													"sid": 421571929890247,
+													"parameters": {
+														"variable": "Level_Pengenalan_Angka",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 940395915707867
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 468230897715662
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Drag_Buku_Lvl4_PA",
+									"sid": 116361357657225,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "position",
+										"end-x": "Self.PostX",
+										"end-y": "Self.PostY",
+										"time": "1",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 957565540819795
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 895702414452164
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Drag_Buku_Lvl4_PA",
+							"sid": 352944833339531,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "position",
+								"end-x": "Self.PostX",
+								"end-y": "Self.PostY",
+								"time": "1",
+								"ease": "easeoutback",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 396958333769079
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 170120206820069,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "double-clicked",
+						"object-clicked": "Drag_Buku_Lvl4_PA"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Drag_Buku_Lvl4_PA",
+					"sid": 953873455013356,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX + 20",
+						"end-y": "Self.SizeY + 20",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 584335260400610,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Drag_Buku_Lvl4_PA",
+					"sid": 337106701102333,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX",
+						"end-y": "Self.SizeY",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 862604775367859,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 444361213862456,
+					"parameters": {
+						"layout": "Drag_Buku_Lvl4_PA.Target_Lay_Buku"
+					}
+				}
+			],
+			"sid": 847730152743086
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 751619224486190,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Btn_Back_Lvl4_PA"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Btn_Back_Lvl4_PA",
+					"sid": 145702562249640,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX + 20",
+						"end-y": "Self.SizeY + 20",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 166626831794769,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Btn_Back_Lvl4_PA",
+					"sid": 174587111875691,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX",
+						"end-y": "Self.SizeY",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 511542263459118,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 881907086211425,
+					"parameters": {
+						"layout": "Lay_Lvl4_PA6"
+					}
+				}
+			],
+			"sid": 184564510845120
+		}
+	],
+	"sid": 846711003890996
+}

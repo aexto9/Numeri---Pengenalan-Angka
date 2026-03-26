@@ -74,15 +74,6 @@
 							"parameters": [
 								"120"
 							]
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 788685903961477,
-							"parameters": {
-								"variable": "score",
-								"value": "0"
-							}
 						}
 					],
 					"sid": 637563574341307
@@ -126,7 +117,7 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 871458742584209,
+					"sid": 243592033739299,
 					"parameters": {
 						"variable": "score",
 						"comparison": 0,
@@ -160,7 +151,7 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 521914067649026,
+							"sid": 901793173870223,
 							"parameters": {
 								"variable": "Level_Pengenalan_Angka",
 								"comparison": 3,

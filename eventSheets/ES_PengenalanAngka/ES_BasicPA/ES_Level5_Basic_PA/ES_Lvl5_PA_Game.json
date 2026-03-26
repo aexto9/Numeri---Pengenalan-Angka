@@ -1,0 +1,568 @@
+{
+	"name": "ES_Lvl5_PA_Game",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 664163249770878
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Drag_Lvl5_PA",
+					"sid": 826851288041561,
+					"parameters": {
+						"instance-variable": "PostX",
+						"value": "Self.X"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Drag_Lvl5_PA",
+					"sid": 786500943798806,
+					"parameters": {
+						"instance-variable": "PostY",
+						"value": "Self.Y"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Lanjut_Lvl5_PA",
+					"sid": 481505072903100,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Lanjut_Lvl5_PA",
+					"sid": 414827792458468,
+					"parameters": {
+						"instance-variable": "SizeX",
+						"value": "Self.Width"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Lanjut_Lvl5_PA",
+					"sid": 636585763344137,
+					"parameters": {
+						"instance-variable": "SizeY",
+						"value": "Self.Height"
+					}
+				}
+			],
+			"sid": 954605747867614,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 531577661979357,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Lay_Lvl5_PA1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Dialog_Lvl5_PA",
+							"sid": 646961629667894,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"callFunction": "startGame",
+							"sid": 172031533542704
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 433094893679025,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"callFunction": "Timer",
+							"sid": 887789755287761,
+							"parameters": [
+								"120"
+							]
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 336628256917398,
+							"parameters": {
+								"variable": "score",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 552714687535837
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-drag-start",
+					"objectClass": "Drag_Lvl5_PA",
+					"sid": 596490573433590,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-top",
+					"objectClass": "Drag_Lvl5_PA",
+					"sid": 157275705211681
+				}
+			],
+			"sid": 659486407572639
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-drop",
+					"objectClass": "Drag_Lvl5_PA",
+					"sid": 560174699079610,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"actions": [],
+			"sid": 658537873477062,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Drag_Lvl5_PA",
+							"sid": 986903835741375,
+							"parameters": {
+								"object": "Drop_Lvl5_PA"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 121013468527341,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "Drag_Lvl5_PA",
+									"sid": 300973794733934,
+									"parameters": {
+										"comparison": 0,
+										"number": "Drop_Lvl5_PA.AnimationFrame"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Drag_Lvl5_PA",
+									"sid": 229052066025115,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "position",
+										"end-x": "Drop_Lvl5_PA.X",
+										"end-y": "Drop_Lvl5_PA.Y",
+										"time": "1",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Drag_Lvl5_PA",
+									"sid": 658247251376330,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "size",
+										"end-x": "Drop_Lvl5_PA.Width",
+										"end-y": "Drop_Lvl5_PA.Height",
+										"time": "0.3",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Drag_Lvl5_PA",
+									"sid": 105151226966476,
+									"behaviorType": "DragDrop",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 461229907408831,
+									"parameters": {
+										"variable": "score",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 173781548669518,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-within-angle",
+											"objectClass": "Drag_Lvl5_PA",
+											"sid": 733734935914656,
+											"parameters": {
+												"within": "0",
+												"angle": "90"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-angle",
+											"objectClass": "Drag_Lvl5_PA",
+											"sid": 405133668469025,
+											"parameters": {
+												"angle": "0"
+											}
+										}
+									],
+									"sid": 345158118706393
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 646743522011294,
+											"parameters": {
+												"variable": "score",
+												"comparison": 0,
+												"value": "5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-opacity",
+											"objectClass": "Lanjut_Lvl5_PA",
+											"sid": 262118351924040,
+											"parameters": {
+												"opacity": "100"
+											}
+										},
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Dialog_Lvl5_PA",
+											"sid": 783847702639966,
+											"parameters": {
+												"frame-number": "1"
+											}
+										}
+									],
+									"sid": 191281074553271,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [],
+											"sid": 194836255774729
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 947833191971736,
+											"parameters": {
+												"variable": "score",
+												"comparison": 0,
+												"value": "10"
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 433412687288645,
+											"parameters": {
+												"variable": "IsGameOver"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation-frame",
+											"objectClass": "Dialog_Lvl5_PA",
+											"sid": 953707398415052,
+											"parameters": {
+												"frame-number": "3"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 259337069494019,
+											"parameters": {
+												"seconds": "2.0",
+												"use-timescale": true
+											}
+										},
+										{
+											"callFunction": "winGame",
+											"sid": 998566061293913,
+											"parameters": [
+												"\"Lay_RoadMap_Pengenalan_Angka\""
+											]
+										}
+									],
+									"sid": 881470501618952,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 868470898406519,
+													"parameters": {
+														"variable": "Level_Pengenalan_Angka",
+														"comparison": 3,
+														"value": "5"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "add-to-eventvar",
+													"objectClass": "System",
+													"sid": 949155391370396,
+													"parameters": {
+														"variable": "Level_Pengenalan_Angka",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 738607106145901
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 344508952600607
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-two-properties",
+									"objectClass": "Drag_Lvl5_PA",
+									"sid": 306455032582144,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"\"",
+										"property": "position",
+										"end-x": "Self.PostX",
+										"end-y": "Self.PostY",
+										"time": "1",
+										"ease": "easeoutback",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 664231641771575
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 819775591755747
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Drag_Lvl5_PA",
+							"sid": 481524053661024,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "position",
+								"end-x": "Self.PostX",
+								"end-y": "Self.PostY",
+								"time": "1",
+								"ease": "easeoutback",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 787706504297977
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 736210743364002,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Lanjut_Lvl5_PA"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Lanjut_Lvl5_PA",
+					"sid": 662586452403009,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX + 20",
+						"end-y": "Self.SizeY + 20",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 782354005606115,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Lanjut_Lvl5_PA",
+					"sid": 520025663378077,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "Self.SizeX",
+						"end-y": "Self.SizeY",
+						"time": "0.2",
+						"ease": "easeoutback",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 506628924695744,
+					"parameters": {
+						"seconds": "0.3",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 695413877332806,
+					"parameters": {
+						"layout": "Lay_Lvl5_PA2"
+					}
+				}
+			],
+			"sid": 715404400323104
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 818103140687553,
+					"parameters": {
+						"variable": "timer",
+						"comparison": 2,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 758623549631190,
+					"parameters": {
+						"variable": "IsGameOver"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "LoseGame",
+					"sid": 926050154863204
+				}
+			],
+			"sid": 987097186428588
+		}
+	],
+	"sid": 972615697437790
+}

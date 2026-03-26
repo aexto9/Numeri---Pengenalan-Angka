@@ -1,0 +1,77 @@
+{
+	"name": "ES_Level2_Finish",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 537320298290290
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 432715535052139,
+					"parameters": {
+						"seconds": "1.5",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Drag_Lvl2",
+					"sid": 397537754889266,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"callFunction": "winGame",
+					"sid": 545524080673224,
+					"parameters": [
+						"\"Lay_RoadMap_Pengenalan_Angka\""
+					]
+				}
+			],
+			"sid": 623255087966701,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 740875170570515,
+							"parameters": {
+								"variable": "Level_Pengenalan_Angka",
+								"comparison": 3,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 441853762580865,
+							"parameters": {
+								"variable": "Level_Pengenalan_Angka",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 731985012122054
+				}
+			]
+		}
+	],
+	"sid": 982997887841068
+}

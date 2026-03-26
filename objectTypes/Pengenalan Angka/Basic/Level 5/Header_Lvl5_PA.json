@@ -1,0 +1,54 @@
+{
+	"name": "Header_Lvl5_PA",
+	"plugin-id": "Sprite",
+	"sid": 553152860428586,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 690,
+						"height": 228,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9333547,
+						"collisionPoly": {
+							"points": [
+								0.06086956521739131,
+								0,
+								0.9695652173913043,
+								0.039473684210526314,
+								0.9855072463768116,
+								0.08771929824561403,
+								0.9376811594202898,
+								0.9429824561403509,
+								0.014492753623188406,
+								0.8596491228070176
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 331088755752199,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
